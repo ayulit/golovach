@@ -4,6 +4,7 @@ public class App00 {
 
 	public static void main(String[] args) throws Exception {
 		try (X x0  = new X("0"); X x1  = new X("1"); X x2  = new X("2");) {
+			// System.exit(0); // kills JVM - no close() then
 			throw new Exception();
 		} catch (Exception e) {
 			System.err.println("catch");
