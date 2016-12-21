@@ -4,7 +4,7 @@ public class App00 {
 
 	public static void main(String[] args) throws Exception {
 		try (X x0  = new X("0"); X x1  = new X("1"); X x2  = new X("2");) {
-			System.out.println("try");
+			throw new Exception();
 		}
 
 	}
@@ -17,12 +17,12 @@ class X implements AutoCloseable {
 	
 	public X(String name) {		
 		this.name = name;
-		System.out.println("new:" + name);
+		System.err.println("new:" + name);
 	}
 
 	@Override
 	public void close() throws Exception {
-		System.out.println("close:" + name);				
+		System.err.println("close:" + name);				
 	}
 	
 }
